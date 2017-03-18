@@ -12,7 +12,10 @@ class MatakuliahController extends Controller
     //
     public function awal()
     {
-        return "Hallo matakuliah";
+        //relasi dari dosen ke pengguna
+        return $data = dosen::where('pengguna_id', 12)->with('pengguna')->get(); 
+        //relasi dari pengguna ke dosen
+        return $data = pengguna::where('id', 12)->with('dosen')->get();
     }
     public function tambah()
     {

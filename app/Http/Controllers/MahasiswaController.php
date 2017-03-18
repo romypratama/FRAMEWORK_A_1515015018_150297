@@ -13,7 +13,11 @@ class MahasiswaController extends Controller
     //
     public function awal()
     {
-        return "Hallo mahasiswa";
+        //return "hello dari MahasiswaaController";
+        //relasi dari dosen ke pengguna
+        return $data = mahasiswaa::where('pengguna_id', 14)->with('pengguna')->get(); 
+        //relasi dari pengguna ke dosen
+        return $data = pengguna::where('id', 12)->with('mahasiswaa')->get();
     }
     public function tambah()
     {
