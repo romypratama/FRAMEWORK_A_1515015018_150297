@@ -30,12 +30,32 @@ Route::get('berita/{berita?}',function($berita="laravel 5"){
 });
 
 Route::get('pengguna','PenggunaController@awal');
-Route::get('dosen','DosenController@tambah');
-Route::get('mahasiswa','MahasiswaController@awal');
+Route::get('pengguna/{pengguna}','PenggunaController@lihat');
+Route::post('pengguna/simpan','PenggunaController@simpan');
+Route::get('pengguna/edit/{pengguna}','PenggunaController@edit');
+Route::post('pengguna/edit/{pengguna}','PenggunaController@update');
+Route::get('pengguna/hapus/{pengguna}','PenggunaController@hapus');
+
+Route::get('ruangan','RuanganController@awal');
+Route::get('ruangan/{ruangan}','RuanganController@lihat');
+Route::post('ruangan/simpan','RuanganController@simpan');
+Route::get('ruangan/edit/{ruangan}','RuanganController@edit');
+Route::post('ruangan/edit/{ruangan}','RuanganController@update');
+Route::get('ruangan/hapus/{ruangan}','RuanganController@hapus');
+
 Route::get('matakuliah','MatakuliahController@awal');
+Route::get('matakuliah/{matakuliah}','MatakuliahController@lihat');
+Route::post('matakuliah/simpan','MatakuliahController@simpan');
+Route::get('matakuliah/edit/{matakuliah}','MatakuliahController@edit');
+Route::post('matakuliah/edit/{matakuliah}','MatakuliahController@update');
+Route::get('matakuliah/hapus/{matakuliah}','MatakuliahController@hapus');
+
+Route::get('dosen','DosenController@tambah');
+Route::get('mahasiswa','MahasiswaController@tambah');
 Route::get('dosen_matakuliah','Dosen_MatakuliahController@awal');
 Route::get('jadwal_matakuliah','Jadwal_MatakuliahController@awal');
-Route::get('ruangan','RuanganController@awal');
+
+
 
 
 //Route('group', ['prefix' => 'Posttest', '']);

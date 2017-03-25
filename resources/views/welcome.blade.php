@@ -38,8 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Nama : Romy Pratama</div>
-                <div class="title">Nim : 1515015018</div>
+                <div class="title">{!! $nama !!}</div>
+                <div class="title">{!!  $nim !!}</div>
             </div>
         </div>
     </body>
