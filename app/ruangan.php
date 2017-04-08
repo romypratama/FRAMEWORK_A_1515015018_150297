@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ruangan extends Model
 {
-    //
-    protected $table = 'ruangan';
-    protected $fillable = ['title'];
+    protected $table='ruangan';
+
+    public function Jadwal(){
+    	return $this->hasMany(Jadwal::class);
+    }
 }

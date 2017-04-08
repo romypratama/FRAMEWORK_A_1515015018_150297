@@ -3,13 +3,13 @@
 
 <div class="panel panel-info">
 <div class="panel-heading">
-	<strong><a href="{{ url('matakuliah') }}">
+	<strong><a href="{{ url('jadwal_matakuliah') }}">
 	<i style="color:white;" class="fa text-default fa-chevron-left"></i></a>
-	Perbarui Data Matakuliah</strong>
+	Perbarui Data Jadwal Mahasiswa</strong>
 	
 	</div>
-		{!! Form::model($matakuliah,['url'=>'matakuliah/edit/'.$matakuliah->id,'class'=>'form-horizontal']) !!}
-		@include('matakuliah.form')
+		{!! Form::model($jadwalMatakuliah,['url'=>'jadwal_matakuliah/edit/'.$jadwalMatakuliah->id,'class'=>'form-horizontal']) !!}
+		@include('jadwal_matakuliah.form')
 		
 		<div style="width: 100%;text-align: right;">
 				<button class="btn btn-info"><i class="fa fa-save"></i>Perbarui</button>
