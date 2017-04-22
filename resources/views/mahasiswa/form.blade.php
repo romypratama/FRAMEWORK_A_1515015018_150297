@@ -1,35 +1,33 @@
-
 <div class="form-group">
 	<label class="col-sm-2 control-label">Nama</label>
 	<div class="col-sm-10">
-		{!! Form::text('nama',null,['class'=>'form-control','id'=>'nama','placeholder'=>"Nama"]) !!}
-		</div>
+		{!! Form::text('nama',null,['class'=>'form-control','placeholder'=>"Masukan Nama"]) !!}	
+	</div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">NIM</label>
+	<label class="col-sm-2 control-label">NIM</label>
 	<div class="col-sm-10">
-		{!! Form::text('nim',null,['class'=>'form-control','id'=>'nim','placeholder'=>"NIM"]) !!}
-		</div>
+		{!! Form::text('nim',null,['class'=>'form-control','placeholder'=>"Masukan NIM"]) !!}	
+	</div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Alamat</label>
+	<label class="col-sm-2 control-label">Alamat</label>
 	<div class="col-sm-10">
-		{!! Form::textarea('alamat',null,['class'=>'form-control','id'=>'alamat','placeholder'=>"Alamat"]) !!}
-		</div>
+		{!! Form::textarea('alamat',null,['class'=>'form-control','placeholder'=>"Masukan Alamat"]) !!}	
+	</div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Username</label>
+	<label class="col-sm-2 control-label">Username</label>
 	<div class="col-sm-10">
-		{!! Form::text('username',null,['class'=>'form-control','placeholder'=>"Username"]) !!}
-		</div>
+		{!! Form::text('username',null,['class'=>'form-control','placeholder'=>"Masukan Username"]) !!}	
+	</div>
 </div>
-
 <div class="form-group">
-<label class="col-sm-2 control-label">Password</label>
+	<label class="col-sm-2 control-label">Password</label>
 	<div class="col-sm-10">
-		{!! Form::password('password',null,['class'=>'form-control','placeholder'=>"Password"]) !!}
-		</div>
+		{!! Form::password('password',['class'=>'form-control','placeholder'=>"Password"]) !!}	
+	</div>
 </div>

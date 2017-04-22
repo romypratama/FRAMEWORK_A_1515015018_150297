@@ -14,7 +14,7 @@ class BuatTableRuangan extends Migration
     {
         Schema::create('ruangan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tittle');
+            $table->string('title');
             $table->timestamps();
         });
     }

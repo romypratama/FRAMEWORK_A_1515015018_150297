@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TbDosenMatakuliah extends Migration
+class BuatTableDosenMatakuliah extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,11 @@ class TbDosenMatakuliah extends Migration
     {
         Schema::create('dosen_matakuliah', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('dosen_id',false,true);
-            $table->foreign('dosen_id')->references('id')->on('dosen')->onDelete('cascade');
-            $table->integer('matakuliah_id',false,true);
-            $table->foreign('matakuliah_id')->references('id')->on('matakuliah')->onDelete('cascade');
+            $table->integer('dosen_id')->unsigned();
+            $table->foreign('dosen_id')->references('id')->on('dosen');
+            $table->integer('matakuliah_id')->unsigned();
+            $table->foreign('matakuliah_id')->references('id')->on('matakuliah');
+            $table->timestamps();
         });
     }
 
