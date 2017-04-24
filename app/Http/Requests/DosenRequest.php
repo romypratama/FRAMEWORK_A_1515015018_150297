@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class MahasiswaRequest extends Request
+class DosenRequest extends Request
 {
     public function authorize()
     {
@@ -15,11 +15,11 @@ class MahasiswaRequest extends Request
     {
     	$validasi = [
     		'nama'=>'required',
-    		'nim'=>'required|integer',
+    		'nip'=>'required|integer',
     		'alamat'=>'required',
     		'username'=>'required'
     		];
-    		if($this->is('mahasiswa/tambah')){
+    		if($this->is('dosen/tambah')){
     			$validasi['password'] = 'required';
     		}
     		return $validasi;
